@@ -1,0 +1,113 @@
+Funkce 1: Testovací případy pro hlavní_menu:
+TC01: Výběr platné možnosti z hlavního menu
+Popis: Ověříme si že volba číslo 1 spustí funkci pridat_ukol
+Vstupní podmínky: Program zobrazí hlavní menu
+Kroky testu:
+            1.spusťte program
+            2.ověřte že se spustilo hlavní menu a ukázalo vám volby
+            3.zadejte číslo 1 a potvrďte
+Očekávaný vysledek: Program spustí funkci pridat_ukol()
+Skutečný vysledek: Funkce pridat_ukol byla spuštěna
+Stav: Pass
+Popis: Testuje navigaci z hlavního menu.
+
+
+TC02: Výběr neplatné možnosti
+Popis: Ověření zadání neplatné možnosti a zobrazení chybové hlašky
+Vstupní podmínky: Program zobrazí hlavní menu
+Kroky testu:
+            1.spusťte program
+            2.ověřte že se spustilo hlavní menu a ukázalo vám volby
+            3.zadejte číslo 6 a potvrďte
+Očekávaný vysledek: Program vypíše chybovou hlašku "Neplatná volba, zadejte číslo mezi 1 a 4."
+Skutečný vysledek: zobrazila se chybová hláška
+Stav: Pass
+Popis: Testuje co se stane při zadání neplatné volby
+
+
+Funkce 2: Testovací případy pro pridat_ukol
+TC03: Přidaní úkolu se správným nazvem
+Popis: Ověření že přidání úkolu se správným názvem přidá úkol do seznamu
+Vstupní podmínky: seznam úkolů
+Kroky testu:
+            1.zadejte volbu "1.Přidat nový úkol"
+            2.zadejte název úkolu (např:Nákup)
+            3.potvrďte
+Očekávaný vysledek: Úkol Nákup se přidá do seznamu úkolů 
+Skutečný vysledek: Úkol byl přidán do seznamu úkolů
+Stav: Pass
+Popis: Testujeme správné zadávani funkce pridat_ukol()
+
+
+TC04: Přidaní úkolu s prázdným nazvem
+Popis: Ověření že přidání úkolu s prázdným názvem vypíše chybovou hlášku
+Vstupní podmínky: seznam úkolů
+Kroky testu:
+            1.zadejte volbu "1.Přidat nový úkol"
+            2.zadejte prázdný název
+            3.potvrďte
+Očekávaný vysledek: Program vypíše chybovou hlašku "Název úkolu nesmí být prázdný."
+Skutečný vysledek: zobrazila se chybová hláška
+Stav: Pass
+Popis: Testujem chybovou hlášku při zadání neplatného názvu
+
+
+Funkce 3:Testovací případy pro zobrazit_ukoly:
+TC05: Zobrazení prázdného seznamu úkolů
+Popis: Ověříme si že pokud je seznam úkolů prázdny zobrazí se hláška "Žádné úkoly nejsou k dispozici."
+Vstupní podmínky: 
+Kroky testu:
+            1.zadejte volbu "2. Zobrazit všechny úkoly"
+            2.potvrďte
+Očekávaný vysledek: Zobrazí se hláška "Žádné úkoly nejsou k dispozici." 
+Skutečný vysledek: Zobrazila se hláška
+Stav: Pass
+Popis: Testuje správné zobrazení prázdného seznamu úkolu
+
+TC06: Zobrazení úkolů v seznamu
+Popis: Ověříme že seznam úkolů nám ukaže úkol "Nákup"
+Vstupní podmínky: 
+Kroky testu:
+            1.zadejte volbu "2. Zobrazit všechny úkoly"
+            2.potvrďte
+Očekávaný vysledek: Zobrazí se seznam úkolů
+Skutečný vysledek: Zobrazí se úkol nákup
+Stav: Pass
+Popis: Testujeme správné zobrazení seznamu úkolů
+
+
+Funkce 4:Testovací případy pro odstranit_ukol()
+TC07: Odstranění existujícího úkolu
+Popis: Ověříme si že úkol jde správně odstranit ze seznamu úkolů
+Vstupní podmínky: program zobrazí seznam úkolů s úkolem č 1 "Nákup"
+Kroky testu:
+            1.zadejte volbu "3 odstranit_ukol()"
+            2.zadejte číslo úkolu pro odstranění (např číslo 1)
+            3.potvrďte
+Očekávaný vysledek: Úkol 1 "Nákup" bude odstraněn ze seznamu
+Skutečný vysledek: Úkol byl odstraněn
+Stav: Pass
+Popis: Testuje funkci pro odstranění úkolu
+
+TC08: Odstranění neexistujícího úkolu
+Popis: Ověříme si že zadání neplatného čísla úkolu nám vypíše chybovou hlášku
+Vstupní podmínky: program zobrazí seznam úkolů
+Kroky testu:
+            1.zadejte volbu "3 odstranit_ukol()"
+            2.zadejte číslo úkolu pro odstranění který neexistuje (např číslo 500)
+            3.potvrďte
+Očekávaný vysledek: Vypsání chybové hlášky 
+Skutečný vysledek:zobrazila se chybová hláška 
+Stav: Pass
+Popis: Testuje chybové hlášení při odstranění neexistujícího úkolu
+
+TC09: Žádné úkoly nejsou k odstranění
+Popis: Ověříme si že pokud nemáme soubor k odstranění vypíše to chybovou hlášku
+Vstupní podmínky: program zobrazí seznam úkolů
+Kroky testu:
+            1.zadejte volbu "3 odstranit_ukol()"
+            2.potvrďte
+Očekávaný vysledek: Vypsání chybové hlášky "Žádné úkoly nejsou k dispozici k odstranění."
+Skutečný vysledek: zobrazila se chybová hláška
+Stav: Pass
+Popis: Testuje chybové hlášení když není žádný úkol k odstranění dispozici

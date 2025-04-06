@@ -4,11 +4,11 @@ ukoly = [] # Seznam pro uchovávání úkolů
 def hlavni_menu():
     while True:
         print("Hlavní menu:")
-        print("1.Přidat nový úkol")
+        print("1. Přidat nový úkol")
         print("2. Zobrazit všechny úkoly")
         print("3. Odstranit úkol")
         print("4. Konec programu")
-        volba = input("Vyber možnost (1-4): ")
+        volba = int(input("Vyber možnost (1-4): "))
 
         if volba == 1:
             pridat_ukol()
@@ -17,7 +17,8 @@ def hlavni_menu():
         elif volba == 3:
             odstranit_ukol()
         elif volba == 4:
-            exit print("Program končí")
+            print("Program končí")
+            exit
         else:
             print("Neplatná volba, zadejte číslo mezi 1 a 4.")
 
@@ -32,22 +33,39 @@ def pridat_ukol():
         if popis == "":
             print("Popis úkolu nesmí být prázdný.")
             continue
-        ukoly.append("nazev, popis")
+        ukol = {'nazev': nazev,
+                'popis': popis
+                }
+        ukoly.append(ukol)
         print("Úkol 'nazev' byl úspěšně přidán")
-
+        break
         
 # Funkce pro zobrazení úkolů
 def zobrazit_ukoly():
     if not ukoly:
         print("Žádné úkoly nejsou k dispozici.")
     else:
-        print("Seznam úkolů:")
+        print("Seznam úkolů")
+        for i, ukol in enumerate(ukoly):
+            print(f"{i}: {ukol['nazev']}")
 
 # Funkce pro odstranění úkolu
 def odstranit_ukol():
     if not ukoly:
         print("Žádné úkoly nejsou k dispozici k odstranění.")
-    else
+    elif
+        while True:
+            zobrazit_ukoly()
+            cislo_ukolu = int(input("Zadejte číslo úkolu, který chcete odstranit."))
+            if cislo_ukolu == "":
+                print("Číslo úkolu nesmí být prázdné.")
+                continue
+            if cislo_ukolu not in ukoly:
+                print("Číslo úkolu neexistuje.") 
+            ukoly.pop(cislo_ukolu)
+            print("Úkol byl odstraněn")
+            break
+   
 
 # Spuštění programu
 hlavni_menu()

@@ -95,7 +95,7 @@ Vstupní podmínky: program zobrazí seznam úkolů
 Kroky testu:
             1.zadejte číslo úkolu pro odstranění který neexistuje (např číslo 500)
             2.potvrďte
-Očekávaný vysledek: Vypsání chybové hlášky "Neplatné číslo úkolu."
+Očekávaný vysledek: Vypsání chybové hlášky "Číslo úkolu neexistuje"
 Skutečný vysledek:zobrazila se chybová hláška 
 Stav: Pass
 Popis: Testuje chybové hlášení při odstranění neexistujícího úkolu

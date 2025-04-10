@@ -110,3 +110,26 @@ Očekávaný vysledek: Vypsání chybové hlášky "Žádné úkoly nejsou k dis
 Skutečný vysledek: zobrazila se chybová hláška
 Stav: Pass
 Popis: Testuje chybové hlášení když není žádný úkol k odstranění dispozici
+
+Funkce 5:Testovací případy pro ukončení programu
+TC10: Ukončení programu
+Popis: Ověříme si že pokud zadáme v hlavním menu číslo 4 tak se nám ukončí program
+Vstupní podmínky: Hlavní menu
+Kroky testu:
+            1.zadejte volbu "4" 
+            2.potvrďte
+Očekávaný vysledek: Ukončení programu.
+Skutečný vysledek: Ukončení programu.
+Stav: Pass
+Popis: Testuje funkci ukončení programu.
+
+TC11: Ukončení programu
+Popis: Ověříme si že pokud zadáme v hlavním menu číslo 4 tak se nám ukončí program
+Vstupní podmínky: Hlavní menu
+Kroky testu:
+            1.zadejte volbu "4" 
+            2.potvrďte
+Očekávaný vysledek: Ukončení programu.
+Skutečný vysledek: Program se neukončil
+Stav: Fail
+Popis: Testuje funkci ukončení programu.

@@ -18,7 +18,7 @@ def hlavni_menu():
             odstranit_ukol()
         elif volba == 4: #pri zadani cisla 4 ukončíme program
             print("Program končí")
-            exit
+            break
         else:
             print("Neplatná volba, zadejte číslo mezi 1 a 4.")
 
@@ -60,7 +60,7 @@ def odstranit_ukol():
             if cislo_ukolu == "": #pokud uzivatel nezada žádné číslo úkolu vypíše to hlášku že pole nesmí byt prázdné
                 print("Číslo úkolu nesmí být prázdné.")
                 continue
-            if cislo_ukolu <0 or cislo_ukolu >= len(ukoly)-1: #pokud uzivatel zadá číslo úkolu který neexistuje požádá ho to o nové číslo
+            if cislo_ukolu <0 or cislo_ukolu > len(ukoly)-1: #pokud uzivatel zadá číslo úkolu který neexistuje požádá ho to o nové číslo
                 print("Číslo úkolu neexistuje.") 
                 continue
             else:

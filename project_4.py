@@ -10,6 +10,7 @@ def hlavni_menu():
         print("4. Konec programu")
         volba = int(input("Vyber možnost (1-4): "))
 
+
         if volba == 1: #pri zadani cisla 1 se prida úkol 
             pridat_ukol()
         elif volba == 2: #pri zadani cisla 2 se zobrazí úkoly
@@ -21,6 +22,8 @@ def hlavni_menu():
             break
         else:
             print("Neplatná volba, zadejte číslo mezi 1 a 4.")
+
+
 
 # Funkce pro přidání úkol
 def pridat_ukol():
@@ -39,6 +42,8 @@ def pridat_ukol():
         ukoly.append(ukol)
         print("Úkol 'nazev' byl úspěšně přidán")
         break
+
+
         
 # Funkce pro zobrazení úkolů
 def zobrazit_ukoly():
@@ -48,6 +53,8 @@ def zobrazit_ukoly():
         print("Seznam úkolů")
         for i, ukol in enumerate(ukoly):
             print(f"{i}: {ukol['nazev']}")
+  
+
 
 # Funkce pro odstranění úkolu
 def odstranit_ukol():
